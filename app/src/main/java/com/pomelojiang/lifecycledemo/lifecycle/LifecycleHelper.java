@@ -38,13 +38,13 @@ public class LifecycleHelper {
     private void registerWithAppCompatActivity(AppCompatActivity activity, LifecycleListener listener) {
         FragmentManager fm = activity.getSupportFragmentManager();
         LifecycleFragment fragment = getLifecycleFragment(fm);
-        fragment.getAppLifecycle().addListeners(listener);
+        fragment.getAppLifecycle().addListener(listener);
     }
 
     private void registerWithFragment(Fragment fragment, LifecycleListener listener) {
         FragmentManager fm = fragment.getChildFragmentManager();
         LifecycleFragment lifecycleFragment = getLifecycleFragment(fm);
-        lifecycleFragment.getAppLifecycle().addListeners(listener);
+        lifecycleFragment.getAppLifecycle().addListener(listener);
     }
 
     private LifecycleFragment getLifecycleFragment(FragmentManager fm) {

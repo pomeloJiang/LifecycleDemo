@@ -22,7 +22,7 @@ public class ActivityFragmentLifecycle implements Lifecycle {
             Collections.newSetFromMap(new WeakHashMap<LifecycleListener, Boolean>());
 
     @Override
-    public void addListeners(@NonNull LifecycleListener listener) {
+    public void addListener(@NonNull LifecycleListener listener) {
         listenerSet.add(listener);
         switch (lifecycleStatus) {
             case STATUS_CREATED:

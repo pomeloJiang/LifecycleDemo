@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
  */
 public interface Lifecycle {
 
-    void addListeners(@NonNull LifecycleListener listener);
+    void addListener(@NonNull LifecycleListener listener);
 
     void removeListener(@NonNull LifecycleListener listener);
 }
